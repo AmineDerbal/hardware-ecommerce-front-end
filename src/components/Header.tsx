@@ -15,7 +15,7 @@ const Header = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-32 h-32 object-contain"
+            className="w-28 h-28 object-contain"
           />
         </a>
         <div className="flex items-center ml-[25px] p-[5px] border-solid border-[1px] border-gray-200">
