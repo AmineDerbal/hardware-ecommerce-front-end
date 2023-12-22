@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="w-full ">
-      <div className="flex items-center justify-around px-6 py-2">
+      <div className="flex items-center px-32 justify-between py-2">
         <a
           href="/"
           className="flex items-center"
@@ -32,7 +32,7 @@ const Header = () => {
         <div className="flex items-center justify-end gap-12">
           <div className="relative">
             <PersonOutline className="cursor-pointer" />
-            <div className="z-10 min-w-[200px] border-solid border-[1px] border-black absolute bg-white right-[-50px] shadow-xl border-0 border-t-2 border-red ">
+            <div className="hidden z-10 min-w-[200px] border-solid border-[1px] border-black absolute bg-white right-[-50px] shadow-xl border-0 border-t-2 border-red ">
               <div className="flex flex-col p-4 gap-2 justify-center items-center">
                 <p>A returning customer?</p>
                 <button
