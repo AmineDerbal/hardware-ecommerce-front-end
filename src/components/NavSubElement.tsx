@@ -3,7 +3,7 @@ type NavSubElementProps = {
 };
 
 const NavSubElement = ({ element }: NavSubElementProps) => {
-  return <div className="p-2">{element}</div>;
+  return <div className="p-2 cursor-pointer">{element}</div>;
 };
 
 export default NavSubElement;
