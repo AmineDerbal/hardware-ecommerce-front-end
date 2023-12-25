@@ -12,7 +12,7 @@ export const App = () => {
   const { userModal } = useSelector((state: RootState) => state.toggle);
   const handleClick = () => {
     if (userModal) {
-      dispatch(toggleUserModal());
+      dispatch(toggleUserModal(false));
     }
   };
   useEffect(() => {}, [userModal]);
