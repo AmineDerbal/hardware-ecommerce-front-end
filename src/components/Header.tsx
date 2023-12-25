@@ -40,7 +40,7 @@ const Header = () => {
           <div className="relative">
             <PersonOutline
               className="cursor-pointer"
-              onClick={() => dispatch(toggleUserModal())}
+              onClick={() => dispatch(toggleUserModal(!userModal))}
             />
             {userModal && (
               <div
@@ -53,7 +53,7 @@ const Header = () => {
                     className="text-white p-1 bg-red w-fit"
                     onClick={() => {
                       if (userModal) {
-                        dispatch(toggleUserModal());
+                        dispatch(toggleUserModal(!userModal));
                       }
                       navigate('/Login');
                     }}
