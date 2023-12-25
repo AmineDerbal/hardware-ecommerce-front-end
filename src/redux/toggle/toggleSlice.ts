@@ -8,8 +8,8 @@ const toggleSlice = createSlice({
   name: 'toggle',
   initialState,
   reducers: {
-    toggleUserModal(state) {
-      const userModal = !state.userModal;
+    toggleUserModal(state, action) {
+      const userModal = action.payload;
       return { ...state, userModal };
     },
   },
