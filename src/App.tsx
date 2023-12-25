@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box } from '@material-ui/core';
 import { RootState } from './redux/Store';
 import { toggleUserModal } from './redux/toggle/toggleSlice';
 import { Home, Login, Register } from './pages';
@@ -20,24 +21,26 @@ export const App = () => {
     <div onClick={handleClick}>
       <Router>
         <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={<Home />}
-          />
-          <Route
-            path="/login"
-            element={<Login />}
-          />
-          <Route
-            path="/register"
-            element={<Register />}
-          />
-          <Route
-            path="/product-category/:category"
-            element={<Category />}
-          />
-        </Routes>
+        <Box className="min-h-screen">
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              path="/register"
+              element={<Register />}
+            />
+            <Route
+              path="/product-category/:category"
+              element={<Category />}
+            />
+          </Routes>
+        </Box>
       </Router>
     </div>
   );
