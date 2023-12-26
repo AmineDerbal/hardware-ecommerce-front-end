@@ -13,7 +13,14 @@ import {
 import { LockOutlined } from '@material-ui/icons';
 
 const Login = () => {
-  const handleSubmit = () => {};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      username: data.get('username'),
+      password: data.get('password'),
+    });
+  };
   return (
     <Container
       maxWidth="xs"
@@ -35,16 +42,16 @@ const Login = () => {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="mt-1"
+          className="mt-1 py-2 px-6 shadow-md"
         >
           <TextField
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            id="username"
+            label="username"
+            name="username"
+            autoComplete="username"
             autoFocus
           />
           <TextField
