@@ -13,6 +13,7 @@ const Register = () => {
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
+      username: data.get('username'),
       password: data.get('password'),
       confirmPassword: data.get('confirmPassword'),
     });
@@ -41,6 +42,14 @@ const Register = () => {
             name="email"
             autoComplete="email"
             autoFocus
+          />
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            id="username"
+            label="username"
+            name="username"
           />
           <TextField
             margin="normal"
